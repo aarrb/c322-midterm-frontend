@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
 let selectedQuestions = []; // Array to hold selected questions for the quiz
 
 async function fetchQuestions() {
-  const response = await fetch('http://localhost:8080/questions');
+  const response = await fetch('https://midterm-aarrb.onrender.com/questions');
   const questions = await response.json();
   
   const questionsBank = document.getElementById('questionsBank');
@@ -13,7 +13,7 @@ async function fetchQuestions() {
     let questionDiv = document.createElement('div');
     questionDiv.className = 'question';
     questionDiv.innerHTML = `
-      <img src="http://localhost:8080/questions/${question.id}/image" alt="Question image">
+      <img src="https://midterm-aarrb.onrender.com/questions/${question.id}/image" alt="Question image">
       <p>Question ${question.id}: ${question.description}</p>
       <div class="choices">
         ${question.choices.map((choice, index) => `
@@ -93,7 +93,7 @@ async function saveQuiz() {
     body: JSON.stringify(payload)
   };
 
-  const response = await fetch('http://localhost:8080/quizzes', request);
+  const response = await fetch('https://midterm-aarrb.onrender.com/quizzes', request);
   if (response.ok) {
     alert('Quiz saved successfully!');
     // Optionally reset the UI for a new quiz
