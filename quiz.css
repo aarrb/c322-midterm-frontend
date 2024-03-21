@@ -1,17 +1,141 @@
-.screen{
-    width: 40vw;
-    height: 24.7vw;
-    margin-left: 30vw;
-    margin-right: 30vw;
+.screen {
+    width: 60vw;
+    margin: 2vw auto;
 }
 
 .controls {
     display: flex;
     justify-content: space-between;
+    padding: 1vw;
 }
 
 .hide {
-    visibility: hidden;
     display: none;
 }
 
+#quizSelection {
+    margin: 2vw;
+    padding: 1vw;
+    border: 1px solid #ddd;
+}
+
+.quiz {
+    cursor: pointer;
+    padding: 1vw;
+    margin: 1vw 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.quiz:hover {
+    background-color: #f5f5f5;
+}
+
+#questionDisplay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2vw;
+    height: 100%;
+}
+
+#questionDisplay img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    margin-bottom: 1vw;
+}
+
+#results {
+    padding: 2vw;
+    text-align: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.topnav {
+    background-color: #333;
+}
+
+.topnav a {
+    color: #fff;
+}
+
+.topnav a:hover {
+    background-color: #555;
+}
+
+#quizArea {
+    background-color: #fff;
+    padding: 2vw;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    height: 500px;
+}
+
+#question h2 {
+    margin-top: 0;
+    color: #333;
+    text-align: center;
+}
+
+#answers {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#answers li {
+    margin-bottom: 1vw;
+}
+
+#answers label {
+    display: block;
+    padding: 1vw;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#answers label:hover {
+    background-color: #f0f0f0;
+}
+
+button {
+    padding: 1vw 2vw;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#results {
+    background-color: #fff;
+    padding: 2vw;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#results h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+#score {
+    font-weight: bold;
+    color: #333;
+}

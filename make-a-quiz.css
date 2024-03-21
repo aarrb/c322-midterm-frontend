@@ -1,21 +1,25 @@
-* {
-    box-sizing: border-box;
-  }
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
 
-  .questions {
-    width: 70%;
-    float: left;
-    padding: 15px;
-    border: 1px solid orange;
-    margin-right: 5%;
-  }
-  
-  .quiz {
-    width: 25%;
-    float: right;
-    padding: 15px;
-    border: 1px solid yellow;
-  }
+.questions-bank {
+  width: 60%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  overflow-y: auto;
+}
 
-  
+.quiz-creation-panel {
+  width: 35%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-left: 20px;
+}
 
+.selected-questions {
+  border-top: 1px solid #ccc;
+  margin-top: 10px;
+  padding-top: 10px;
+}

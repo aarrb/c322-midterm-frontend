@@ -1,11 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Create a Quiz</title>
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="make-a-quiz.css">
 </head>
+
 <body>
-  
+  <ul class="topnav">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="add-question.html">Add questions</a></li>
+    <li><a class="active" href="make-a-quiz.html">Create a quiz</a></li>
+    <li><a href="take-a-quiz.html">Take a quiz</a></li>
+    <li class="right"><a href="#about">About</a></li>
+  </ul>
+
+  <div class="content">
+    <div class="questions-bank" id="questionsBank">
+      <!-- Dynamically loaded questions will go here -->
+    </div>
+
+    <div class="quiz-creation-panel">
+      <h2>The new quiz (<span id="questionCount">0</span> questions)</h2>
+      <input type="text" id="quizTitle" placeholder="Enter quiz title...">
+      <div id="selectedQuestions" class="selected-questions">
+        <!-- Selected questions will be displayed here -->
+      </div>
+      <button onclick="saveQuiz()">Save your changes</button>
+      <button onclick="saveAndNewQuiz()">Save this quiz and start a new one</button>
+      <p>
+        If you want to remove a question from the quiz, you can click on the
+        question here and it will be removed from the quiz.
+      </p>
+    </div>
+  </div>
+
+  <script src="make-a-quiz.js"></script>
 </body>
+
 </html>
